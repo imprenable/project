@@ -1,0 +1,110 @@
+html {
+  min-height:100%;
+  overflow-x:hidden;
+  overflow-y:scroll;
+  position:relative;
+  width:100%;
+}
+header {
+	background-image: url("bg-header.jpg");
+  	height:90px;
+}
+header nav{
+	margin-top: 20px;
+	margin-right: 20px;
+	float: right;
+}
+header dir{
+	float: right;
+	margin-top: 60px;
+	font-size: 1.3rem;
+	font-color: red;
+}
+body .logocls{
+	margin-right: 10px
+	margin-top: 7px;
+
+}
+body .aboutusview{
+	margin-top: 20px;
+	margin-right: 65px;
+	margin-left: 65px;
+	border:1px solid;
+	background-color: skyblue;
+}
+
+footer {
+	background-image: url("bg-header.jpg");
+  	height:95px;
+}
+footer li{
+	list-style-type: none;
+}
+
+
+.container{
+	width: 100%;
+}
+.progressbar{
+	counter-reset: step;
+}
+.progressbar li{
+	list-style-type: none;
+	float: left;
+	width: 22.22%;
+	position: relative;
+	text-align: center;
+}
+.progressbar li:before{
+	content: counter(step);
+	counter-increment: step;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	border: 3px solid;
+	display: block;
+	text-align: center;
+	margin: 0 auto 10px auto;
+	border-radius: 50%; 
+	background-color: white;
+}
+.progressbar li:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	background-color: #ddd;
+	top:15px;
+	left: -50%;
+	z-index: -1;
+}
+.progressbar li:first-child:after{
+	content: none;
+}
+.progressbar li:active{
+	color:green;
+}
+.progressbar li.active:before{
+	border-color: green;
+}
+.progressbar li.active + li:after{
+	background-color: green;
+}
+.details{
+	width: 600px;
+	border: 1px solid;
+}
+.title_bar{
+	background: skyblue;
+	height: 25px;
+	width: 100%;
+}
+.max_min_button{
+	border: 1px solid;
+	width: 25px;
+	height: 23px;
+	float: right;
+	cursor: pointer;
+	border-radius: 50%;
+
+}

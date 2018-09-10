@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="myapp" ng-controller="myctr">
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular-route.js"></script>
+	<script type="text/javascript" src="Controllers.js"></script>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<link href="Style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<header class="wrap">
+        <img class="logo" src="" style="width:70px; height: 70px; float: left;" />
+         <h1 style="float: left; color: red" >Name of site</h1>
+         <nav>
+         	<button><a href="SignUp.html"> Sign Up</a></button>&nbsp;
+         	<button><a href="SignIn.html"> Sign In</a></button>
+         </nav>
+         <dir>
+         	<a href="#!" style="color: red;">Home</a>&nbsp;&nbsp;
+         	<a href="#!AboutUs" style="color: red;">About Us</a>&nbsp;&nbsp;
+         	<a href="#!HowToUse" style="color: red;">How To Use</a>&nbsp;&nbsp;
+         	<a href="#!Contact" style="color: red;">Contact</a>
+         </dir>
+	</header>
+	<div class="col-lg-5" >
+		<video width="600" controls>
+ 			 <source src="mov_bbb.mp4" type="video/mp4">
+  				Your browser does not support HTML5 video.
+		</video></div>
+		<div style="float: right;" class="col-lg-6">
+			<div ng-view class="aboutusview" class="howtouseview"></div>
+		</div>
+	<div class="logocls" style="margin-left: 10px">
+		<marquee behaviour="scroll" direction="left" class="col-lg-5">
+			<img src="apple.png" width="120" height="80">
+			<img src="moto.png" width="120" height="80">
+			<img src="micr.png" width="120" height="80">
+			<img src="oooo.png" width="120" height="80">
+			<img src="sam.jpg" width="120" height="80">
+			
+		</marquee>
+	</div><br>
+	
+
+<footer>
+	<div style="float: left;">
+	<ul>
+			<li><a href="#!" style="color: red;">Home</a>&nbsp;&nbsp;</li>
+         	<li><a href="#!AboutUs" style="color: red;">About Us</a>&nbsp;&nbsp;</li>
+         	<li><a href="#!HowToUse" style="color: red;">How To Use</a>&nbsp;&nbsp;</li>
+         	<li><a href="#!Contact" style="color: red;">Contact</a></li>
+	</ul></div>
+	<div style="float: right;">
+		<label>Adderss</label>
+		<p>bnvud ksdhf isfhk</p>
+	</div>
+</footer>	
+</body>
+</html>
