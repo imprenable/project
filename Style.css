@@ -6,19 +6,60 @@ html {
   width:100%;
 }
 header {
-	background-image: url("bg-header.jpg");
-  	height:90px;
+	background-color: black;
+  	height:70px;
 }
-header nav{
-	margin-top: 20px;
-	margin-right: 20px;
+header hnav{
+	margin-top: 5px;
+	margin-right: 5px;
 	float: right;
 }
 header dir{
 	float: right;
-	margin-top: 60px;
-	font-size: 1.3rem;
-	font-color: red;
+	margin-top: 40px;
+	font-size: 1.1rem;
+	font-color: Black;
+}
+.column{
+	float: left;
+    width: 50%;
+    padding: 10px;
+    height: 700px;
+}
+section {
+	width: 100%;
+	height: 600px;
+	float: left;
+	background-color: #264d73;
+	color: white;
+}
+section .videocls{
+	margin-top: 90px;
+	margin-left: 200px;
+}
+.videocls button{
+	width: 300px;
+	height: 40px;
+	margin-top: 20px;
+	background-color: #ff6600;
+	border-color: #ff6600;
+	color: white;
+}
+.videocls img{
+	width: 50px;
+	height: 50px;
+	margin-top: 30px;
+	margin-left: 20px; 
+}
+
+ .featurecls{
+	margin-top: 90px;
+	margin-right: 250px;
+	float: right;
+}
+ .featurecls img{
+	width: 35px;
+	height: 35px;
 }
 body .logocls{
 	margin-right: 10px
@@ -34,7 +75,7 @@ body .aboutusview{
 }
 
 footer {
-	background-image: url("bg-header.jpg");
+	background-color: black;
   	height:95px;
 }
 footer li{
@@ -74,7 +115,7 @@ footer li{
 	width: 100%;
 	height: 3px;
 	background-color: #ddd;
-	top:15px;
+	top:12px;
 	left: -50%;
 	z-index: -1;
 }
@@ -89,6 +130,7 @@ footer li{
 }
 .progressbar li.active + li:after{
 	background-color: green;
+	top:13px;
 }
 .details{
 	width: 600px;
@@ -96,15 +138,49 @@ footer li{
 }
 .title_bar{
 	background: skyblue;
-	height: 25px;
+	height: 30px;
 	width: 100%;
 }
 .max_min_button{
 	border: 1px solid;
 	width: 25px;
 	height: 23px;
+	top: 5px;
 	float: right;
 	cursor: pointer;
 	border-radius: 50%;
+	background-color: skyblue;
+}
 
+
+nav {
+    float: left;
+    width: 30%;
+    height: 530px; 
+    background-color: #264d73;
+    padding: 20px;
+}
+article {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: white;
+    height: 600px; /* only for demonstration, should be removed */
+}
+.logincls{
+	margin-top: 60px;
+	margin-left: 150px;
+}
+.logincls input{
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	width: 400px;
+	height: 30px;
+}
+.logincls button{
+	background-color: #264d73;
+	border-color: #264d73;
+	width: 400px;
+	height: 35px;
 }
