@@ -1,0 +1,32 @@
+<?php
+//require_once("connect.php");
+//$data = json_decode(file_get_contents("php://input"));
+//$name = mysql_real_escape_string($data->name);
+//$email = mysql_real_escape_string($data->email);
+//$pswd = mysql_real_escape_string($data->pswd);
+//$cpswd = mysql_real_escape_string($data->cpswd);
+
+//echo $data;
+//echo $name;
+//echo $email;
+//echo $pswd;
+
+$info = new \stdClass();
+
+$status = array('success1');
+$insert_query="INSERT INTO signuptb(`Name`, `Email`, `Password`, `confirm_password`)VALUES('".$name."','".$email."','".$pswd."','".$cpswd."')"
+$result=mysqli_query($con,$insert_query);
+$err_query=$insert_query;
+$info->a="n";
+if (mysqli_errno($con)){
+		$error1= mysqli_errno($con) . ":".mysqli_error($con);
+		$data=$error1."<br>".$err_query;
+		$info->status='error: '.$data;
+		exit();
+		}
+else {
+		$info->status='success'
+}
+
+echo json_encode($info);
+?>
