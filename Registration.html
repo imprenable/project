@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="registerctr">
+<head>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.js"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular-route.js"></script>
+   <script type="text/javascript" src="Registration/RegController.js"></script>
+   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+   <link href="Style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+   <header class="wrap">
+        <img class="logo" src="img/logo.png" style="width:140px; height: 70px; float: left;" />
+         
+         <hnav style="float: right;">
+            <center style="float: right;">
+            <button><a href="HomePage.html" style="color: black;"> Log Out</a></button>&nbsp;
+            </center><br>
+         
+         <div style="float: right;margin-top: 10px; font-size: 1.1rem;">
+            <a href="HomePage.html" style="color: white;">Home</a>&nbsp;&nbsp;
+            <a href="#!AboutUs" style="color: white;">About Us</a>&nbsp;&nbsp;
+            <a href="#!HowToUse" style="color: white;">How To Use</a>&nbsp;&nbsp;
+            <a href="#!Contact" style="color: white;">Contact</a>
+         </div></hnav>
+   </header>
+   <section>
+   <div class="container">
+      <ul class="progressbar">
+         <li class="{{activemod}}">General Details</li>
+         <li class="{{activemod1}}">Importatnt Details</li>
+         <li class="{{activemod2}}">Bank Validation</li>
+         <li class="{{activemod3}}">Aggrement</li>
+      </ul> 
+   </div>
+<br><br><br><br><br><br>
+<center>
+   <div class="col-lg-9">
+      <div class="details">
+         <div class="title_bar"><b>General Details</b>
+             <a href="#!gdetails"><button class="max_min_button" ng-click="f1(m1)"><b>{{m1}}</b></button></a>
+         </div>
+         <div ng-if="m1 == '-'" ng-view></div>
+      </div>
+
+      <div class="details">
+         <div class="title_bar"><b>Importatnt Details</b>
+            <a href="#!impdetails"><button class="max_min_button" ng-click="f2(m2)"><b>{{m2}}</b></button></a>
+         </div>      
+         <div ng-if="m2 == '-' " ng-view></div>
+      </div>
+
+      <div class="details">
+         <div class="title_bar"><b>Bank Details</b>
+            <a href="#!bdetails"><button class="max_min_button" ng-click="f3(m3)"><b>{{m3}}</b></button></a>
+         </div>   
+         <div ng-if="m3== '-'" ng-view></div>   
+      </div>
+
+      <div class="details">
+         <div class="title_bar"><b>Aggrement</b>
+            <a href="#!agdetails"><button class="max_min_button" ng-click="f4(m4)"><b>{{m4}}</b></button></a>
+         </div>   
+         <div ng-if="m4=='-'" ng-view></div> 
+      </div>
+      
+   </div>
+</center>
+</section>
+   
+</body><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<footer>
+   <div style="float: left;">
+   <ul>
+         <li><a href="#!" style="color: white;">Home</a>&nbsp;&nbsp;</li>
+            <li><a href="#!AboutUs" style="color: white;">About Us</a>&nbsp;&nbsp;</li>
+            <li><a href="#!HowToUse" style="color: white;">How To Use</a>&nbsp;&nbsp;</li>
+            <li><a href="#!Contact" style="color: white;">Contact</a></li>
+   </ul></div>
+   <div style="float: right; color: white;">
+      <label><b>Adderss</b></label>
+      <p>bnvud ksdhf isfhk</p>
+   </div>
+</footer>   
+</html>

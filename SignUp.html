@@ -1,31 +1,6 @@
-<!DOCTYPE html>
-<html ng-app="myApp" ng-controller="signupctr">
-<head>
-	<title></title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular-route.js"></script>
-	<script type="text/javascript" src="Controllers.js"></script>
-	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-	<link href="Style.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-	<header class="wrap">
-        <img class="logo" src="logo.png" style="width:140px; height: 70px; float: left;" />
-         
-          <hnav style="float: right;">
-         	<center style="float: right;">
-         	<button><a href="SignIn.html"> Sign In&nbsp;</a></button></center><br>
-     		<div style="float: right; margin-top: 10px; font-size: 1.1rem;">
-         	<a href="HomePage.html" style="color: white;">Home</a>&nbsp;&nbsp;
-         	<a href="#!AboutUs" style="color: white;">About Us</a>&nbsp;&nbsp;
-         	<a href="#!HowToUse" style="color: white;">How To Use</a>&nbsp;&nbsp;
-         	<a href="#!Contact" style="color: white;">Contact</a>
-         </div></hnav>
-	</header>
+
 <section>
-   <div>
+   <div ng-app="myapp" ng-controller="signupctr">
       <nav>
          
       </nav>
@@ -34,69 +9,18 @@
          <div class="col-lg-5">
             <h3 style="color: black;">Sign Up Here</h3><br>
             <label style="color: black;"><b>Name</b></label><br>
-            <input type="text" placeholder="your name" ng-model="name"><br><br>
+            <input type="email" placeholder="your name" ng-model="name"><br><br>
             <label style="color: black;"><b>Email</b></label><br>
             <input type="email" placeholder="your email" ng-model="email"><br><br>
             <label style="color: black;"><b>Password</b></label><br>
             <input type="password" placeholder="your password" ng-model="pswd"><br><br>
             <label style="color: black;"><b>Confirm Password</b></label><br>
-            <input type="password" placeholder="Re-enter your password" ng-model="cpswd"><br><br>
+            <input type="email" placeholder="Re-enter your password" ng-model="cpswd"><br><br>
             <button ng-click="insertData()">Sign Up</button><br><br>
-            <center><a href="SignIn.html" style="margin-left: 120px; color: black;">or Sign In</a></center>
-            
+            <center><a href="#!SignIn/SignIn" style="margin-left: 120px; color: black;">or Sign In</a></center>
+            <script src="SignUp/signupController.js"></script>
          </div></div>
       </article>
    </div>
-</section><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<script>
-   var app = angular.module('myApp',[]);
-   app.controller('signupctr', function($scope,$http){
-      
-      $scope.insertData = function(){
+</section>
 
-            $http({
-               method : 'POST',
-               url : 'sign_Up.php',
-               data : {
-                  name: $scope.name,
-                  email: $scope.email,
-                  pswd: $scope.pswd,
-                  cpswd: $scope.cpswd
-               }
-            })    
-               .then(function(response){
-                  $scope.output = response.logg;
-                  //alert(response.data);
-                  //alert($scope.output);
-                  console.log(response.data.stat1);
-                  console.log(response.data.stat2);
-                  /*console.log(response.data.pswd);
-                  console.log(response.data.email);
-                  console.log(response.data.status);
-                  console.log(response.data.message);
-                  console.log(response.data.sta);
-                  console.log(response.data.name);
-                  console.log(response.data.cpswd);
-                  console.log(response.data.name);*/
-                  
-             });
-   }
-   });
-</script>
-
-
-   <footer>
-   <div style="float: left;">
-   <ul>
-         <li><a href="#!" style="color: white;">Home</a>&nbsp;&nbsp;</li>
-            <li><a href="#!AboutUs" style="color: white;">About Us</a>&nbsp;&nbsp;</li>
-            <li><a href="#!HowToUse" style="color: white;">How To Use</a>&nbsp;&nbsp;</li>
-            <li><a href="#!Contact" style="color: white;">Contact</a></li>
-   </ul></div>
-   <div style="float: right; color: white;">
-      <label>Adderss</label>
-      <p>bnvud ksdhf isfhk</p>
-   </div>
-</footer>   
-</body>
-</html>
